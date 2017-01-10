@@ -1,2 +1,6 @@
 <h1>Admin</h1>
 {{article-form saveArticle="saveArticle"}}
+{{#each model as |article|}}
+  {{article-blurb article=article destroyArticle="destroyArticle"}}
+  <button {{action 'destroyArticle' article}}>Delete</button>
+{{/each}}

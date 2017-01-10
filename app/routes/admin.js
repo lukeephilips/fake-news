@@ -13,7 +13,7 @@ export default Ember.Route.extend({
     },
 
     destroyArticle(article) {
-      rental.destroyRecord();
+      article.destroyRecord();
       this.transitionTo('admin');
     }
   }
