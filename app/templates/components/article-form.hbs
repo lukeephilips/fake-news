@@ -1,24 +1,30 @@
-<div class="container">
-  <h1>New Article</h1>
-  <div class="row">
-    <form>
-      <div class="input-field col s6">
-        {{input value=title class="validate" id="title"}}
-        <label for="title">title</label>
-      </div>
-
-      <div class="input-field col s6">
-        {{input value=image class="validate" id="image"}}
-        <label for="image">image</label>
-      </div>
-
-      <div class="input-field col s6 offset-s3">
-        {{textarea value=text class="validate" id="text"}}
-        <label for="text">text</label>
-      </div>
-      <div class="col s12">
-        <button class="btn btn-success" {{action 'saveArticle1'}}>Save</button>
-      </div>
-    </form>
+{{#if addNewArticle}}
+  <div class="container">
+    <h1>New Article</h1>
+    <div class="row">
+      <form>
+        <div class="input-field col s6">
+          {{input value=title class="validate" id="title"}}
+          <label for="title">title</label>
+        </div>
+        <div class="input-field col s6">
+          {{input value=author class="validate" id="author"}}
+          <label for="author">author</label>
+        </div>
+        <div class="input-field col s6">
+          {{input value=image class="validate" id="image"}}
+          <label for="image">image</label>
+        </div>
+        <div class="input-field col s6 offset-s3">
+          {{textarea value=text class="materialize-textarea" id="text"}}
+          <label for="text">text</label>
+        </div>
+        <div class="col s12">
+          <button class="btn btn-success" {{action 'saveArticle'}}>Save</button>
+        </div>
+      </form>
+    </div>
   </div>
-</div>
+{{else}}
+<button {{action 'articleToggle'}} class="waves-effect waves-light btn">New Article</button>
+{{/if}}
