@@ -1,6 +1,10 @@
-<h1>Admin</h1>
-{{article-form saveArticle="saveArticle"}}
-{{#each model as |article|}}
+<div class="container">
+  <h1>Admin</h1>
+  {{article-form saveArticle="saveArticle"}}
+  {{#each model as |article|}}
   {{article-blurb article=article destroyArticle="destroyArticle"}}
-  <button {{action 'destroyArticle' article}}>Delete</button>
-{{/each}}
+  <div class="row">
+    <div class="del-btn-div"><button {{action 'destroyArticle' article}} class="btn red">Delete</button></div>
+  </div>
+  {{/each}}
+</div>
