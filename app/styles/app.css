@@ -9,3 +9,7 @@
   text-align: center;
   background: linear-gradient(135deg,#50E3C2,#85BAFF);
 }
+
+textarea {
+  min-height: 200px;
+}
