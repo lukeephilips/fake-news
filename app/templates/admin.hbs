@@ -3,7 +3,7 @@
   {{article-form saveArticle="saveArticle"}}
 
   {{#each model as |article|}}
-    {{edit-article article=article updateArticle="updateArticle"}}
+    {{edit-article article=article update="update"}}
     <div class="row">
       <div class="del-btn-div"><button {{action 'destroyArticle' article}} class="btn red">Delete</button></div>
     </div>
