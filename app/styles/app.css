@@ -6,8 +6,14 @@
   color: darkred;
 }
 .banner {
-  text-align: center;
+  display: block;
+  margin: 0 auto;
+
+}
+nav, footer{
   background: linear-gradient(135deg,#50E3C2,#85BAFF);
+  margin-bottom: 10px;
+
 }
 
 textarea {
